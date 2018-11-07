@@ -1,0 +1,20 @@
+<p>Here's a sample of our cool playlist:</p>
+
+<!-- use {} to display a variable in an hbs file -->
+<h2>{{featuredSong.title}}</h2>
+<p>by {{featuredSong.artist}}</p>
+
+<!-- only direct booleans checks allowed (no ===, >, < operators) -->
+{{#if featuredSong.comment}}
+  <h3>Curator's Comment</h3>
+  <p>{{featuredSong.comment}}</p>
+{{else}}
+  <p>No comment yet.</p>
+{{/if}}
+
+<img src="{{featuredSong.photoUrl}}" />
+
+<a href="/playlist">See the Full Playlist</a>
+
+<!-- "login-form.hbs" becomes "login_form" -->
+{{> login_form}}
